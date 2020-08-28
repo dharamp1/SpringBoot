@@ -3,6 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="author" content="Dharmaraj Pawale">
+	<meta name="copyright" content="Sterlite Technologies Ltd.">
+	<meta name="creation_date" content="18-Aug-2020">
 <!-- 	<link rel="stylesheet" href="/styles/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<title>Sterlite Demo-Authentication</title>
