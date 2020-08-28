@@ -28,8 +28,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		// TODO Auto-generated method stub
 		auth.userDetailsService(userDetailsService)	
-		//.passwordEncoder(NoOpPasswordEncoder.getInstance());
-		.passwordEncoder(new BCryptPasswordEncoder());
+		.passwordEncoder(NoOpPasswordEncoder.getInstance());
+		//.passwordEncoder(new BCryptPasswordEncoder());
 	}
 
 	

@@ -12,7 +12,7 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 //@Configuration
 //@EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-	/*@Override
+	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		// TODO Auto-generated method stub
 		auth.ldapAuthentication()
@@ -21,7 +21,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		.contextSource().url("ldap://localhost:389/dc=springframework,dc=org")
 		.and()
 		.passwordCompare().passwordEncoder(NoOpPasswordEncoder.getInstance()).passwordAttribute("userPassword");
-	}*/
+	}
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {

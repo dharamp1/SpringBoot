@@ -20,7 +20,7 @@ public class LoginController {
 		List<String> cities = Arrays.asList("Pune","Mumbai","Nasik");
 		map.addAttribute("message", "Welcome");
 		map.addAttribute("cities", cities);
-		return "hello123";
+		return "redirect:/hello123";
 	}
 	
 	@GetMapping("/login")

@@ -33,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		// Default Spring Security Configuration using http basic
-		/*http.authorizeRequests()
+	/*	http.authorizeRequests()
 				.anyRequest().authenticated() //every request requires the user to be authenticated
 			.and()
 			.formLogin() //form based authentication is supported
@@ -44,7 +44,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 				.antMatchers("/login").permitAll()
 				.antMatchers("/resources/**").permitAll()//allows anyone to access a URL that begins with /resources/. Since this is where our css, javascript, and images are stored all our static resources are viewable by anyone
-				.anyRequest().authenticated()
+				.anyRequest().authenticated()	
 			.and()
 			.formLogin()
 				.loginPage("/login")//when authentication is required, redirect the browser to /login

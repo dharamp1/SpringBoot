@@ -3,8 +3,11 @@ package com.sterlite.demo.spring.entities;
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -22,6 +25,11 @@ public class User implements UserDetails {
 	private String password;
 	
 	private String enabled;
+	
+	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+	private Set<UserAuthority> userAuthorities;
+	
+	
 	
 	public User() {
 		// TODO Auto-generated constructor stub
@@ -59,6 +67,14 @@ public class User implements UserDetails {
 	public void setEnabled(String enabled) {
 		this.enabled = enabled;
 	}
+	
+	public Set<UserAuthority> getUserAuthorities() {
+		return userAuthorities;
+	}
+
+	public void setUserAuthorities(Set<UserAuthority> userAuthorities) {
+		this.userAuthorities = userAuthorities;
+	}
 
 	@Override
 	public String toString() {
@@ -68,7 +84,10 @@ public class User implements UserDetails {
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO Auto-generated method stub
-		return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
+		return getUserAuthorities()
+				.stream()
+				.map(authority->new SimpleGrantedAuthority(authority.getAuthority()))
+				.collect(Collectors.toSet());
 	}
 
 	@Override
@@ -92,6 +111,9 @@ public class User implements UserDetails {
 	@Override
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
-		return true;
+		if(getEnabled().equals("true"))
+			return true;
+		
+		return false;
 	}
 }

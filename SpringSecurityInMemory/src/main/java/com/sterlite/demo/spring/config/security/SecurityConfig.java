@@ -16,11 +16,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		// TODO Auto-generated method stub
 		
-		/*
-		 * auth.inMemoryAuthentication()
-		 * .passwordEncoder(NoOpPasswordEncoder.getInstance())
-		 * .withUser("dharam").password("welcome").authorities("ROLE_USER") .and()
-		 * .withUser("admin").password("admin123").roles("USER","ADMIN");
+		
+		/*  auth.inMemoryAuthentication()
+		  .passwordEncoder(NoOpPasswordEncoder.getInstance())
+		  .withUser("dharam").password("welcome").authorities("ROLE_USER") 
+		  .and()
+		  .withUser("admin").password("admin123").roles("USER","ADMIN");
 		 */
 		
 		PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();

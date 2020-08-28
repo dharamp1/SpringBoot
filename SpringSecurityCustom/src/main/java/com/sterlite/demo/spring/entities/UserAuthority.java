@@ -4,6 +4,7 @@ import java.math.BigInteger;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -16,8 +17,19 @@ public class UserAuthority {
 	private String authority;
 	
 	@ManyToOne
+	@JoinColumn(name = "username")
 	private User user;
 	
+	
+	
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
 	public UserAuthority() {
 		// TODO Auto-generated constructor stub
 	}
@@ -50,14 +62,6 @@ public class UserAuthority {
 		this.authority = authority;
 	}
 	
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
 	@Override
 	public String toString() {
 		return "UserAuthority [authority_id=" + authority_id + ", authority=" + authority + "]";
