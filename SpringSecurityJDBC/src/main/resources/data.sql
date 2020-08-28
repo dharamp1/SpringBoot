@@ -1,6 +1,6 @@
 create table myusers(
     username varchar2(20) primary key,
-    password varchar2(20) not null,
+    password varchar2(255) not null,
     enabled varchar2(5)
 );
 

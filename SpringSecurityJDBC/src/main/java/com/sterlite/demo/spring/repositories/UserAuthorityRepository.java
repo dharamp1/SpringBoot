@@ -12,8 +12,9 @@ import org.springframework.data.jpa.repository.Query;
 import com.sterlite.demo.spring.entities.UserAuthority;
 
 /**
- * @author dharm
- *
+ * @author dharmaraj.pawale@sterlite.com
+ * @copyright Sterlite Technologies Ltd.
+ * @creationdate 18-Aug-2020
  */
 public interface UserAuthorityRepository extends JpaRepository<UserAuthority, BigInteger> {
 	

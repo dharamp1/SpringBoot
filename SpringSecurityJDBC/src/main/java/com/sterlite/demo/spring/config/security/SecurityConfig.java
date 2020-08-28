@@ -16,7 +16,11 @@ import org.springframework.security.crypto.password.StandardPasswordEncoder;
 import com.sterlite.demo.spring.entities.User;
 import com.sterlite.demo.spring.repositories.UserAuthorityRepository;
 import com.sterlite.demo.spring.repositories.UserRepository;
-
+/**
+ * @author dharmaraj.pawale@sterlite.com
+ * @copyright Sterlite Technologies Ltd.
+ * @creationdate 18-Aug-2020
+ */
 @EnableWebSecurity
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
