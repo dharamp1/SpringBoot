@@ -7,7 +7,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
+/**
+ * @author dharmaraj.pawale@sterlite.com
+ * @copyright Sterlite Technologies Ltd.
+ * @creationdate 19-Aug-2020
+ */
 @Entity
 @Table(name = "MYUSERAUTHORITIES")
 public class UserAuthority {
@@ -19,8 +23,6 @@ public class UserAuthority {
 	@ManyToOne
 	@JoinColumn(name = "username")
 	private User user;
-	
-	
 	
 	public User getUser() {
 		return user;
@@ -65,7 +67,5 @@ public class UserAuthority {
 	@Override
 	public String toString() {
 		return "UserAuthority [authority_id=" + authority_id + ", authority=" + authority + "]";
-	}
-	
-	
+	}	
 }

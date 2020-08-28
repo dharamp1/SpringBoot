@@ -1,7 +1,6 @@
 package com.sterlite.demo.spring.respository;
 
 import java.util.List;
-
 import javax.naming.NamingException;
 import javax.naming.directory.Attributes;
 
@@ -10,6 +9,12 @@ import org.springframework.ldap.core.AttributesMapper;
 import org.springframework.ldap.core.LdapTemplate;
 import org.springframework.stereotype.Repository;
 import static org.springframework.ldap.query.LdapQueryBuilder.query;
+
+/**
+ * @author dharmaraj.pawale@sterlite.com
+ * @copyright Sterlite Technologies Ltd.
+ * @creationdate 20-Aug-2020
+ */
 @Repository
 public class LDAPRepository {
 	

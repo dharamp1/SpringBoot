@@ -1,7 +1,5 @@
 package com.sterlite.demo.spring.entities;
 
-import java.math.BigInteger;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -15,10 +13,17 @@ import javax.persistence.Table;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
+/**
+ * @author dharmaraj.pawale@sterlite.com
+ * @copyright Sterlite Technologies Ltd.
+ * @creationdate 19-Aug-2020
+ */
 @Entity
 @Table(name = "MYUSERS")
 public class User implements UserDetails {
+	
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	private String username;
 	
@@ -28,8 +33,6 @@ public class User implements UserDetails {
 	
 	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
 	private Set<UserAuthority> userAuthorities;
-	
-	
 	
 	public User() {
 		// TODO Auto-generated constructor stub
@@ -41,9 +44,7 @@ public class User implements UserDetails {
 		this.password = password;
 		this.enabled = enabled;
 	}
-
-
-
+	
 	public String getUsername() {
 		return username;
 	}

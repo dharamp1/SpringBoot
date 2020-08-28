@@ -15,7 +15,11 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.ldap.DefaultSpringSecurityContextSource;
 import org.springframework.security.ldap.userdetails.UserDetailsContextMapper;
 
-
+/**
+ * @author dharmaraj.pawale@sterlite.com
+ * @copyright Sterlite Technologies Ltd.
+ * @creationdate 20-Aug-2020
+ */
 //@Configuration
 //@Profile("DEV_STANDALONE_H2_TEST_LDAP")
 public class TestApplicationSecurityConfigurationHolder {
