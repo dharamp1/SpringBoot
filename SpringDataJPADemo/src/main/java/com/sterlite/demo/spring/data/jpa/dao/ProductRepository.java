@@ -30,8 +30,8 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 	  List<String> findByBrandFirstLetter(@Param("br") String brand);
 	  
 	  @Modifying
-	  @Query("update Product p set p.name = ?2 where p.id = ?1") void
-	  updateNameById(long id, String name);
+	  @Query("update Product p set p.name = ?2 where p.id = ?1") 
+	  void updateNameById(long id, String name);
 	 
 
 }
